@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basics.css" type=text/css>
+    <title>Ehunt-Register</title>
+  </head>
+  <body class="register">
+    <main>
+      <center>
+        <h1 class="heading secondary">Let's Get Started</h1>
+        <h2 class="subtitle margintop">
+          <% if(warning){%> <%=warning %> <%}%>
+        </h2>
+        <form action="/registering/new" method="POST" name="frm">
+          <div class="input-group">
+            <input
+              class="input-group__input"
+              name="username"
+              id="username"
+              type="text"
+              placeholder="Enter a Username"
+              autocomplete="off"
+            />
+            <input
+              class="input-group__input"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Enter Your Full Name"
+              autocomplete="off"
+            />
+
+            <!-- <input
+              class="input-group__input"
+              name="roll"
+              id="roll"
+              type="text"
+              placeholder="Enter Your Scholar Id"
+              autocomplete="off"
+            /> -->
+          </div>
+          <input type="submit" class="start" value="Submit" />
+          <% if(warning){%>
+          <a href="/login/new"
+            ><input type="button" class="start" value="Login" /> </a
+          ><%}%>
+        </form>
+      </center>
+    </main>
+  </body>
+</html>

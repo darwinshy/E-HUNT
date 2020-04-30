@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/basics.css" type=text/css>
+    <title>Ehunt-Register</title>
+  </head>
+  <body class="register">
+    <main>
+      <center>
+        <h1 class="heading secondary">Enter Your Username</h1>
+        <h2 class="subtitle margintop">
+          <%=error%>
+        </h2>
+        <form action="/login/exist" method="POST" name="frm">
+          <div class="input-group">
+            <input
+              class="input-group__input"
+              name="username"
+              id="username"
+              type="text"
+              placeholder=""
+              autocomplete="off"
+            />
+          </div>
+          <input type="submit" class="start" value="Submit" />
+          <% if(error){%>
+          <a href="/register/new"
+            ><input type="button" class="start" value="Register" /> </a
+          ><%}%>
+        </form>
+      </center>
+    </main>
+  </body>
+</html>

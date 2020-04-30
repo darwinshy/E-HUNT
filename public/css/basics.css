@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #272727;
+}
+
+.home {
+  background-color: #f7f7f7;
+  color: #272727;
+  background-image: url("../images/mainback.png");
+  background-size: cover;
+}
+.register {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -1%;
+}
+.heading {
+  letter-spacing: 1.5rem;
+  font-size: 8em;
+  font-family: "Century Gothic";
+}
+.secondary {
+  font-size: 4em;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5rem;
+}
+.subtitle {
+  /* margin-top: -.8em; */
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Century Gothic";
+}
+
+.name {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 4em;
+  }
+  .secondary {
+    font-size: 3em;
+  }
+}
+
+.margintop {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+.nogap {
+  letter-spacing: normal;
+}
+
+.start {
+  margin-top: 10%;
+  border: none;
+  width: 150px;
+  height: 50px;
+  background-color: #272727;
+  color: #f7f7f7;
+  font-family: "Century Gothic";
+  font-size: 1.3rem;
+  transition: all 0.2s;
+  border: solid #272727;
+}
+
+.start:hover {
+  border: solid #272727;
+  color: #272727;
+  background-color: transparent;
+}
+.form {
+  width: 300px;
+  height: 250px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 21px;
+  box-shadow: 3px 3px 10px #777;
+}
+.input-group {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+.input-group__input {
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  padding: 8px 4px;
+  outline: none;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #666;
+  /* Floating animation */
+}
+.input-group__input:valid ~ .input-group__label {
+  color: #27ae60;
+}
+.input-group__input:invalid ~ .input-group__label {
+  color: #e74c3c;
+}
+.input-group__input:placeholder-shown ~ .input-group__label {
+  color: #666;
+}
+.input-group__input:focus ~ .input-group__label,
+.input-group__input:not(:placeholder-shown) ~ .input-group__label {
+  transform: translateX(-8px) translateY(-28px) scale(0.8);
+}
+.input-group__label {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  cursor: text;
+  transition: all 0.3s ease;
+}
