@@ -114,4 +114,15 @@ img {
   .leaderboards {
     font-size: 12px;
   }
+  img {
+    width: 25vh;
+  }
+  #answer {
+    position: absolute;
+    color: white;
+    width: 240px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
