@@ -45,7 +45,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Routes
-app.get("/home", function (req, res) {
+app.get("/", function (req, res) {
   res.render("home.ejs");
 });
 
