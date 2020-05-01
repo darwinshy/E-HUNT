@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../css/basics.css" />
   </head>
   <body>
-    <input type="button" value="Home" class="leaderboards" />
-    <input type="button" value="Leaderboards" class="leaderboards" />
+    <a href="/<%=user.username%>/true"
+      ><input type="button" value="Home" class="leaderboards"
+    /></a>
+    <a href="/<%=user.username%>/leaderboards/currentstanding">
+      <input type="button" value="Leaderboards" class="leaderboards"
+    /></a>
     <input
       type="button"
       value="<%=user.name%>"

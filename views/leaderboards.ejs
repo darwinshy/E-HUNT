@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboards | EHUNT</title>
+    <link rel="stylesheet" href="../../css/questions.css" />
+    <link rel="stylesheet" href="../../css/basics.css" />
+  </head>
+  <body class="leader">
+    <a href="/<%=currentUser%>/true"
+      ><input type="button" value="Home" class="leaderboards"
+    /></a>
+    <a href="/<%=currentUser%>/leaderboards/currentstanding">
+      <input type="button" value="Leaderboards" class="leaderboards"
+    /></a>
+
+    <input
+      type="button"
+      value="<%=currentUser%>"
+      class="leaderboards profile"
+      disabled
+    />
+
+    <div class="main" style="position: absolute; border: none;">
+      <center>
+        <div class="one">
+          <table>
+            <tr>
+              <th>Place</th>
+              <th>Name</th>
+              <th>Current Question</th>
+            </tr>
+            <%var i =1%> <% users.forEach(function(user){%>
+            <tr>
+              <td><%= i++%></td>
+              <td><%= user.name%></td>
+              <td><%= user.currentQuestion%></td>
+            </tr>
+            <% }) %>
+          </table>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>

@@ -139,3 +139,41 @@ main {
   cursor: text;
   transition: all 0.3s ease;
 }
+.one {
+  color: #f7f7f7;
+}
+#currentquestion {
+  float: left;
+}
+table {
+  border-collapse: collapse;
+  background-color: #111010;
+
+  width: 100%;
+  border-radius: 10px;
+}
+
+th,
+td {
+  font-family: "Motnserrat", sans-serif;
+  text-align: left;
+  font-size: 12px;
+  padding: 10px;
+  color: #f7f7f7;
+}
+
+td {
+  font-size: 1rem;
+}
+
+th {
+  background-color: #111010;
+  color: white;
+}
+
+.leader {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111010;
+}
