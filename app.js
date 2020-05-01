@@ -36,6 +36,8 @@ var docSchema = new mongoose.Schema({
   username: String,
   name: String,
   currentQuestion: Number,
+  flag:Number
+  
 });
 docSchema.plugin(passportLocalMongoose);
 var User = mongoose.model("users", docSchema);
@@ -61,7 +63,11 @@ app.get("/login/new", function (req, res) {
 app.get("/login/usernamenotfound", function (req, res) {
   res.render("login.ejs", { error: "Username was not found" });
 });
+app.get("/:username/leaderboards", function (req, res) {
+  var username = req.params.username;
+  User.
 
+});
 // Logics
 
 app.post("/registering/new", function (req, res) {
@@ -79,6 +85,7 @@ app.post("/registering/new", function (req, res) {
           username: req.body.username,
           name: req.body.name,
           currentQuestion: 1,
+          flag :1
         })
           .save()
           .then((newUser) => {
@@ -116,10 +123,7 @@ app.get("/:username/:existing", function (req, res) {
   });
 });
 
-// app.get("/:username/1", function (req, res) {
-//   res.render("1.ejs");
-// });
-
+// Logic for verifying the Answers
 app.post("/:username/:n", function (req, res) {
   User.findOne({ username: req.params.username }).then((user) => {
     var q = req.params.n;
