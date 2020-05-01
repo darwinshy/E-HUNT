@@ -49,12 +49,15 @@ main {
   font-weight: 800;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   .heading {
-    font-size: 4em;
+    font-size: 3em;
   }
   .secondary {
     font-size: 3em;
+  }
+  .subtitle {
+    font-size: 1rem;
   }
 }
 
