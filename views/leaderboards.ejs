@@ -32,12 +32,19 @@
               <th>Current Question</th>
             </tr>
             <%var i =1%> <% users.forEach(function(user){%>
+            <%if(user.username==currentUser){%>
+            <tr style="background-color: #f7f7f7;">
+              <td style="color: #111010;"><%= i++%></td>
+              <td style="color: #111010;"><%= user.name%></td>
+              <td style="color: #111010;"><%= user.currentQuestion%></td>
+            </tr>
+            <%}else{%>
             <tr>
               <td><%= i++%></td>
               <td><%= user.name%></td>
               <td><%= user.currentQuestion%></td>
             </tr>
-            <% }) %>
+            <% } %> <% }) %>
           </table>
         </div>
       </center>
