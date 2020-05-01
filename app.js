@@ -69,7 +69,7 @@ app.get("/:username/leaderboards/currentstanding", function (req, res) {
     else {
       res.render("leaderboards.ejs", { users: users, currentUser: username });
     }
-  });
+  }).sort({ currentQuestion: -1 });
 });
 
 // Logics
