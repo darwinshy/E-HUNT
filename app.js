@@ -264,6 +264,34 @@ app.post("/:username/:n", function (req, res) {
         res.render("error.ejs");
       }
     }
+    if (q == 11) {
+      if (req.body.answer == "smart") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+    if (q == 12) {
+      if (req.body.answer == "ampersand") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
   });
 });
 
