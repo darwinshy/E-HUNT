@@ -284,7 +284,8 @@ app.post("/:username/:n", function (req, res) {
           { username: req.params.username },
           { $set: { currentQuestion: q } },
           function (err, result) {
-            res.render(q + ".ejs", { user: user });
+            // res.render(q + ".ejs", { user: user });
+            res.render("error.ejs", { warning: "" });
           }
         );
         console.log(user.currentQuestion);
