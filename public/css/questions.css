@@ -79,7 +79,6 @@ img {
   background-color: transparent;
   font-size: 18px;
   letter-spacing: 0.1em;
-  padding: 8px 4px;
   outline: none;
   border: none;
   border-radius: 0px;
@@ -105,12 +104,13 @@ img {
 
 @media only screen and (max-width: 500px) {
   #starttop {
-    top: 75%;
+    top: 79%;
     width: 100px;
     font-size: 1rem;
   }
   .leaderboards {
     font-size: 12px;
+    padding: 8px;
   }
   img {
     width: 25vh;
@@ -129,5 +129,8 @@ img {
   }
   h1 {
     font-size: 1rem;
+  }
+  .main {
+    height: 400px;
   }
 }
