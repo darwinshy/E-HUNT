@@ -116,9 +116,15 @@ img {
   #answer {
     position: absolute;
     color: white;
-    width: 240px;
+    width: 150px;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1rem;
   }
 }
