@@ -106,6 +106,8 @@ img {
 @media only screen and (max-width: 500px) {
   #starttop {
     top: 75%;
+    width: 100px;
+    font-size: 1rem;
   }
   .leaderboards {
     font-size: 12px;
@@ -116,7 +118,8 @@ img {
   #answer {
     position: absolute;
     color: white;
-    width: 150px;
+    width: 90%;
+    font-size: 1rem;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
