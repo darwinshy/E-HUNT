@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 9 | EHUNT</title>
+    <link rel="stylesheet" href="../css/questions.css" />
+    <link rel="stylesheet" href="../css/basics.css" />
+  </head>
+  <body>
+    <a href="/<%=user.username%>/true"
+      ><input type="button" value="Home" class="leaderboards"
+    /></a>
+    <a href="/<%=user.username%>/leaderboards/currentstanding">
+      <input type="button" value="Leaderboards" class="leaderboards"
+    /></a>
+    <input
+      type="button"
+      value="<%=user.name%>"
+      class="leaderboards profile"
+      disabled
+    />
+
+    <div class="main">
+      <form action="/<%=user.username%>/10" method="POST">
+        <center>
+          <span>Question 9</span><br />
+          <div class="questionbox">
+            <h1>
+              555 444 888 33 44 88 66 8
+            </h1>
+            <h2></h2>
+          </div>
+          <input
+            class="input-group__input"
+            name="answer"
+            id="answer"
+            type="text"
+            placeholder="Answer in LowerCase & No Spaces"
+            autocomplete="off"
+          />
+          <input type="submit" class="start" id="starttop" value="Submit" />
+        </center>
+      </form>
+    </div>
+  </body>
+</html>

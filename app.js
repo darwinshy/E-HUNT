@@ -178,6 +178,92 @@ app.post("/:username/:n", function (req, res) {
         res.render("error.ejs");
       }
     }
+
+    if (q == 5) {
+      if (req.body.answer == "shirt") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+
+    if (q == 6) {
+      if (req.body.answer == "helloworld") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+    if (q == 7) {
+      if (req.body.answer == "625") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+    if (q == 8) {
+      if (req.body.answer == "18") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+    if (q == 9) {
+      if (req.body.answer == "longtrunks") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
+    if (q == 10) {
+      if (req.body.answer == "huntlive") {
+        User.updateOne(
+          { username: req.params.username },
+          { $set: { currentQuestion: q } },
+          function (err, result) {
+            res.render(q + ".ejs", { user: user });
+          }
+        );
+        console.log(user.currentQuestion);
+      } else {
+        res.render("error.ejs");
+      }
+    }
   });
 });
 
