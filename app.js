@@ -131,6 +131,11 @@ app.get("/:username/:existing", function (req, res) {
 app.post("/:username/:n", function (req, res) {
   User.findOne({ username: req.params.username }).then((user) => {
     var q = req.params.n;
+    var last = "12";
+
+    if (user.currentQuestion == last) {
+      res.render("error.ejs", { warning: "", user: user, css: "change" });
+    }
     if (q == "start" || q == "resume") {
       res.render(user.currentQuestion + ".ejs", { user: user });
     }
@@ -285,7 +290,7 @@ app.post("/:username/:n", function (req, res) {
           { $set: { currentQuestion: q } },
           function (err, result) {
             // res.render(q + ".ejs", { user: user });
-            res.render("error.ejs", { warning: "" });
+            res.render("error.ejs", { warning: "", user: user });
           }
         );
         console.log(user.currentQuestion);
