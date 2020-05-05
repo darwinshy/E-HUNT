@@ -4,16 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/basics.css" type=text/css>
+    <%if(warning!=null){%>
+    <title>Congratulation</title>
+    <%}else{%>
     <title>Wrong Answer</title>
+    <%}%>
   </head>
-  <body
-    class="register"
-    style="background-color: rgb(17, 16, 16); "
-  >
+  <body class="register" style="background-color: rgb(17, 16, 16);">
     <main>
       <center>
-        <h3 style="color: #f7f7f7;"class="subtitle">Wrong Answer</h2>
-          <input type="button" class="start" id="starttop" value="Try Again" onclick="goBack()" />
+        <%if(warning!=null){%>
+        <h3 style="color: #f7f7f7;" class="subtitle">
+          Thank You for Playing. Stay Tuned
+        </h3>
+        <br />
+        <h3 style="color: #f7f7f7;" class="subtitle">
+          More Questions Will be Updated Soon.
+        </h3>
+        <%}else{%>
+        <h3 style="color: #f7f7f7;" class="subtitle">Wrong Answer</h3>
+        <input
+          type="button"
+          class="start"
+          id="starttop"
+          value="Try Again"
+          onclick="goBack()"
+        />
+        <%}%>
       </center>
     </main>
   </body>
@@ -21,5 +38,5 @@
     function goBack() {
       window.history.back();
     }
-    </script>
+  </script>
 </html>

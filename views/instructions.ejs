@@ -12,20 +12,27 @@
         <h1 class="heading secondary">Welcome</h1>
         <!-- <hr width="40%" /> -->
         <h2 class="subtitle nogap">
-          <% if(existing){ %>  Nice to see you again, <span class="name">
-            <%=user.name%>
-          </h2>
-          <form action="/<%=user.username%>/resume" method="POST">
-            <input type="submit" class="start" value="RESUME" />
-          </form>
-          </span>
-          <%}else{ %> Are you ready to hunt ,<span class="name">
-            <%=user.name%> ?</span
-          ></h2>
-          <form action="/<%=user.username%>/start" method="POST">
-            <input type="submit" class="start" value="START" />
-          </form><%}%>
-        
+          <% if(existing){ %> Nice to see you again,
+          <span class="name"> <%=user.name%></span>
+        </h2>
+        <form action="/<%=user.username%>/resume" method="POST">
+          <input type="submit" class="start" value="RESUME" />
+        </form>
+
+        <%}else{ %>
+        <P
+          >This is an online treasure hunt. It is simple, you just need to
+          answer the questions by Googling and searching through the
+          internet.</P
+        >
+        <P
+          >Note : Some question need extra exploration and creative thinking.</P
+        >
+        Are you ready to hunt ,<span class="name"> <%=user.name%> ?</span>
+        <form action="/<%=user.username%>/start" method="POST">
+          <input type="submit" class="start" value="START" />
+        </form>
+        <%}%>
       </center>
     </main>
   </body>
