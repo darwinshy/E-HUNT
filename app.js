@@ -150,7 +150,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
 
@@ -165,7 +165,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
 
@@ -180,7 +180,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
 
@@ -195,7 +195,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
 
@@ -210,7 +210,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 7) {
@@ -224,7 +224,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 8) {
@@ -238,7 +238,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 9) {
@@ -252,7 +252,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 10) {
@@ -266,7 +266,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 11) {
@@ -280,7 +280,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
     if (q == 12) {
@@ -295,7 +295,7 @@ app.post("/:username/:n", function (req, res) {
         );
         console.log(user.currentQuestion);
       } else {
-        res.render("error.ejs");
+        res.render("error.ejs", { warning: null });
       }
     }
   });
