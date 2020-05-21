@@ -155,7 +155,7 @@ app.post("/:username/:n", function (req, res) {
     }
 
     if (q == 3) {
-      if (req.body.answer == "C++") {
+      if (req.body.answer == "c++") {
         User.updateOne(
           { username: req.params.username },
           { $set: { currentQuestion: q } },
