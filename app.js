@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
-
+require("dotenv").config();
 // Inititalizing Modules
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,10 +26,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Database Connections
-mongoose.connect(
-  "mongodb+srv://user:XjVBg3clW5NUTJ3Q@genericdatabase-odlqy.mongodb.net/test?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
-);
+mongoose.connect(process.env.DB_USERSTRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
 // Declaring Database Schema and Initialising Database , Passport
 var docSchema = new mongoose.Schema({
